@@ -47,7 +47,7 @@ void get_integrals (
     long double x = par_a + h;
     for (size_t i = 0; i < par_K - 2; ++i) {
         const long double math_f_x = math_f (x);
-        const long double math_f_x_plus_h = math_f (x + h);
+        // const long double math_f_x_plus_h = math_f (x + h);
         const long double math_f_x_plus_half_h = math_f (x + half_h);
         par_integrals_value[rec] += math_f_x_plus_half_h;
         par_integrals_value[tra] += math_f_x; // 0.5 1.0 1.0 ... 1.0 1.0 0.5
